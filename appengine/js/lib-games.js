@@ -58,6 +58,7 @@ BlocklyGames.LANGUAGE_NAME = {
 //  'frr': 'Frasch',
   'gl': 'Galego',
 //  'hak': '客家話',
+  'ha': 'Hausa',
   'he': 'עברית',
   'hi': 'हिन्दी',
 //  'hrx': 'Hunsrik',
