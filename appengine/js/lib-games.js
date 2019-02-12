@@ -66,6 +66,7 @@ BlocklyGames.LANGUAGE_NAME = {
   'hy': 'հայերէն',
   'ia': 'Interlingua',
   'id': 'Bahasa Indonesia',
+  'ig': 'Igbo',
   'is': 'Íslenska',
   'it': 'Italiano',
   'ja': '日本語',

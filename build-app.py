@@ -58,18 +58,19 @@ def main(name, lang):
 
 
 def language(name, lang):
-  if os.path.exists('appengine/third-party/blockly/msg/js/%s.js' % lang):
-    # Convert 'pt-br' to 'pt.br'.
-    core_language = 'Blockly.Msg.' + lang.replace('-', '.')
-  else:
-    core_language = 'Blockly.Msg.en'
-  f = open('appengine/%s/generated/%s/msg.js' % (name, lang), 'w')
-  f.write(WARNING)
-  f.write("goog.provide('BlocklyGames.Msg');\n")
-  f.write("goog.require('%s');\n" % core_language)
-  f.close()
-  write_uncompressed(name, lang)
-  write_compressed(name, lang)
+  if lang in ['ig']:
+      if os.path.exists('appengine/third-party/blockly/msg/js/%s.js' % lang):
+        # Convert 'pt-br' to 'pt.br'.
+        core_language = 'Blockly.Msg.' + lang.replace('-', '.')
+      else:
+        core_language = 'Blockly.Msg.en'
+      f = open('appengine/%s/generated/%s/msg.js' % (name, lang), 'w')
+      f.write(WARNING)
+      f.write("goog.provide('BlocklyGames.Msg');\n")
+      f.write("goog.require('%s');\n" % core_language)
+      f.close()
+      write_uncompressed(name, lang)
+      write_compressed(name, lang)
 
 
 def write_uncompressed(name, lang):
